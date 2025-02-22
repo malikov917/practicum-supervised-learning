@@ -1,0 +1,727 @@
+.prisma-button2__icon {
+    display: inline-flex;
+    align-items: center;
+    height: 24px;
+    justify-content: center;
+}
+
+.prisma-button2 {
+    background: none;
+    border: none;
+    position: relative;
+    transition-property: background-color, border-color, box-shadow, color, transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.prisma-button2:disabled {
+    cursor: default;
+    pointer-events: none;
+}
+
+.prisma-button2:active {
+    transform: scale(0.96);
+}
+
+.prisma-button2__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* для того, чтобы аутлайн отображался только при событиях клавиатуры https://react-spectrum.adobe.com/react-aria/useFocusVisible.html */
+.prisma-button2_no-outline {
+    outline: none;
+}
+
+.prisma-button2_view_clear {
+    color: var(--color-content-primary);
+}
+
+.prisma-button2_view_clear:hover {
+    background-color: var(--color-background-glassy-a);
+}
+
+.prisma-button2_view_clear:active {
+    background-color: var(--color-background-glassy-b);
+}
+
+.prisma-button2_view_clear:disabled {
+    color: var(--color-content-tertiary);
+}
+
+.prisma-button2_view_clear:disabled.prisma-button2_process {
+    background-color: var(--color-background-glassy-b);
+    color: var(--color-content-primary);
+}
+
+.prisma-button2_view_clear .prisma-button2__sublabel {
+    color: var(--color-content-secondary);
+}
+
+.prisma-button2_view_ghost {
+    border-color: var(--color-accent-neutral);
+    color: var(--color-content-primary);
+    border: 1px solid;
+}
+
+.prisma-button2_view_ghost:hover {
+    border-color: var(--color-background-glassy-c);
+    color: var(--color-content-secondary);
+}
+
+.prisma-button2_view_ghost:hover .prisma-button2__sublabel {
+    color: var(--color-content-secondary);
+}
+
+.prisma-button2_view_ghost:active {
+    border-color: var(--color-content-tertiary);
+    color: var(--color-content-tertiary);
+}
+
+.prisma-button2_view_ghost .prisma-button2__sublabel {
+    color: var(--color-content-secondary);
+}
+
+.prisma-button2_view_ghost:disabled {
+    border-color: var(--color-background-glassy-a);
+    color: var(--color-content-tertiary);
+}
+
+.prisma-button2_view_ghost.prisma-button2_process {
+    border-color: var(--color-content-secondary);
+    color: var(--color-content-secondary);
+}
+
+/* для L */
+
+.prisma-button2_view_ghost.prisma-button2_size_l {
+    padding-block: 19px;
+    padding-inline: 23px;
+}
+
+.prisma-button2_view_ghost.prisma-button2_size_l.prisma-button2_with-icon {
+    padding: 17px;
+}
+
+.prisma-button2_view_ghost.prisma-button2_size_l.prisma-button2_with-icon-start,
+.prisma-button2_view_ghost.prisma-button2_size_l.prisma-button2_with-icon-end {
+    padding-block: 17px;
+}
+
+.prisma-button2_view_ghost.prisma-button2_size_l.prisma-button2_with-sublabel {
+    padding-block: 11px;
+}
+
+.prisma-button2_view_ghost.prisma-button2_size_l.prisma-button2_with-icon-start {
+    padding-inline: 19px 23px;
+}
+
+.prisma-button2_view_ghost.prisma-button2_size_l.prisma-button2_with-icon-end {
+    padding-inline: 23px 19px;
+}
+
+.prisma-button2_view_ghost.prisma-button2_size_l.prisma-button2_with-icon-end.prisma-button2_size_l.prisma-button2_with-icon-start {
+    padding-inline: 19px;
+}
+
+/* для M */
+
+.prisma-button2_view_ghost.prisma-button2_size_m {
+    padding-block: 14px;
+    padding-inline: 23px;
+}
+
+.prisma-button2_view_ghost.prisma-button2_size_m.prisma-button2_with-icon,
+.prisma-button2_view_ghost.prisma-button2_size_m.prisma-button2_with-icon-end,
+.prisma-button2_view_ghost.prisma-button2_size_m.prisma-button2_with-icon-start {
+    padding: 12px;
+}
+
+.prisma-button2_view_ghost.prisma-button2_size_m.prisma-button2_with-sublabel {
+    padding-block-start: 6px;
+    padding-block-end: 7px;
+}
+
+.prisma-button2_view_ghost.prisma-button2_size_m.prisma-button2_with-icon-start {
+    padding-inline: 19px 23px;
+}
+
+.prisma-button2_view_ghost.prisma-button2_size_m.prisma-button2_with-icon-end {
+    padding-inline: 23px 19px;
+}
+
+.prisma-button2_view_ghost.prisma-button2_size_m.prisma-button2_with-icon-end.prisma-button2_size_m.prisma-button2_with-icon-start {
+    padding-inline: 19px;
+}
+
+/* для S */
+
+.prisma-button2_view_ghost.prisma-button2_size_s {
+    padding-inline: 15px;
+    padding-block: 8px;
+}
+
+.prisma-button2_view_ghost.prisma-button2_size_s.prisma-button2_with-icon {
+    padding: 5px;
+}
+
+.prisma-button2_view_ghost.prisma-button2_size_s.prisma-button2_with-icon-start {
+    padding-inline-start: 11px;
+}
+
+.prisma-button2_view_ghost.prisma-button2_size_s.prisma-button2_with-icon-end {
+    padding-inline-end: 11px;
+}
+
+.prisma-button2_view_ghost.prisma-button2_size_s.prisma-button2_with-icon-start,
+.prisma-button2_view_ghost.prisma-button2_size_s.prisma-button2_with-icon-end {
+    padding-block: 5px;
+}
+
+/* для XS */
+
+.prisma-button2_view_ghost.prisma-button2_size_xs {
+    padding-inline: 15px;
+    padding-block: 6px;
+}
+
+.prisma-button2_view_ghost.prisma-button2_size_xs.prisma-button2_with-icon {
+    padding: 3px;
+}
+
+.prisma-button2_view_ghost.prisma-button2_size_xs.prisma-button2_with-icon-start {
+    padding-inline-start: 11px;
+}
+
+.prisma-button2_view_ghost.prisma-button2_size_xs.prisma-button2_with-icon-end {
+    padding-inline-end: 11px;
+}
+
+.prisma-button2_view_ghost.prisma-button2_size_xs.prisma-button2_with-icon-start,
+.prisma-button2_view_ghost.prisma-button2_size_xs.prisma-button2_with-icon-end {
+    padding-block: 3px;
+}
+
+.prisma-button2_view_primary {
+    background-color: var(--color-accent-neutral);
+    color: var(--color-content-inverted-primary);
+}
+
+.prisma-button2_view_primary:hover {
+    background-color: var(--color-accent-neutral-hover);
+}
+
+.prisma-button2_view_primary:active {
+    background-color: var(--color-accent-neutral-hover);
+}
+
+.prisma-button2_view_primary:disabled {
+    background-color: var(--color-background-glassy-a);
+    color: var(--color-content-tertiary);
+}
+
+.prisma-button2_view_primary:disabled.prisma-button2_process {
+    background-color: var(--color-accent-neutral-hover);
+    color: var(--color-content-inverted-primary);
+}
+
+.prisma-button2_view_primary:disabled .prisma-button2__sublabel {
+    color: var(--color-content-tertiary);
+}
+
+.prisma-button2_view_primary .prisma-button2__sublabel {
+    color: var(--color-content-inverted-secondary);
+}
+
+.prisma-button2_view_secondary {
+    background-color: var(--color-background-glassy-a);
+    color: var(--color-content-primary);
+}
+
+.prisma-button2_view_secondary:hover {
+    background-color: var(--color-background-glassy-b);
+}
+
+.prisma-button2_view_secondary:active {
+    background-color: var(--color-background-glassy-c);
+}
+
+.prisma-button2_view_secondary:disabled {
+    background-color: var(--color-background-glassy-a);
+    color: var(--color-content-tertiary);
+}
+
+.prisma-button2_view_secondary:disabled.prisma-button2_process {
+    background-color: var(--color-background-glassy-b);
+    color: var(--color-content-primary);
+}
+
+.prisma-button2_view_secondary .prisma-button2__sublabel {
+    color: var(--color-content-secondary);
+}
+
+.prisma-button2_view_raised {
+    color: var(--color-content-primary);
+    background-color: var(--color-background-default);
+    box-shadow: var(--shadow-small-default);
+}
+
+.prisma-button2_view_raised:hover {
+    box-shadow: var(--shadow-small-hovered);
+}
+
+.prisma-button2_view_raised:active {
+    box-shadow: var(--shadow-small-pressed);
+}
+
+.prisma-button2_view_raised:disabled {
+    background-color: var(--color-background-glassy-a);
+    color: var(--color-content-tertiary);
+    box-shadow: var(--shadow-small-hidden);
+}
+
+.prisma-button2_view_raised:disabled.prisma-button2_process {
+    color: var(--color-content-primary);
+    background-color: var(--color-background-default);
+    box-shadow: var(--shadow-small-hovered);
+}
+
+.prisma-button2_view_raised .prisma-button2__sublabel {
+    color: var(--color-content-secondary);
+}
+
+.prisma-button2_size_l {
+    font: var(--font-ys-body-16-regular-ui);
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    padding-block: 20px;
+    padding-inline: 24px;
+    border-radius: var(--border-radius-8);
+    gap: var(--spacing-8);
+}
+
+.prisma-button2_size_l .prisma-button2__sublabel {
+    font: var(--font-ys-caption-12-regular);
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.prisma-button2_size_l.prisma-button2_with-icon {
+    padding: 18px;
+}
+
+.prisma-button2_size_l.prisma-button2_with-icon-start,
+.prisma-button2_size_l.prisma-button2_with-icon-end {
+    padding-block: 18px;
+}
+
+.prisma-button2_size_l.prisma-button2_with-sublabel {
+    padding-block: 12px;
+}
+
+.prisma-button2_size_l.prisma-button2_with-icon-start {
+    padding-inline: 20px 24px;
+}
+
+.prisma-button2_size_l.prisma-button2_with-icon-end {
+    padding-inline: 24px 20px;
+}
+
+.prisma-button2_size_l.prisma-button2_with-icon-end.prisma-button2_size_l.prisma-button2_with-icon-start {
+    padding-inline: 20px;
+}
+
+.prisma-button2_size_m {
+    font: var(--font-ys-body-16-regular-ui);
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    padding-block: 15px;
+    padding-inline: 24px;
+    border-radius: var(--border-radius-6);
+    gap: var(--spacing-8);
+}
+
+.prisma-button2_size_m .prisma-button2__sublabel {
+    font: var(--font-ys-caption-12-regular);
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.prisma-button2_size_m.prisma-button2_with-icon,
+.prisma-button2_size_m.prisma-button2_with-icon-end,
+.prisma-button2_size_m.prisma-button2_with-icon-start {
+    padding: 13px;
+}
+
+.prisma-button2_size_m.prisma-button2_with-sublabel {
+    padding-block-start: 7px;
+    padding-block-end: 8px;
+}
+
+.prisma-button2_size_m.prisma-button2_with-icon-start {
+    padding-inline: 20px 24px;
+}
+
+.prisma-button2_size_m.prisma-button2_with-icon-end {
+    padding-inline: 24px 20px;
+}
+
+.prisma-button2_size_m.prisma-button2_with-icon-end.prisma-button2_size_m.prisma-button2_with-icon-start {
+    padding-inline: 20px;
+}
+
+.prisma-button2_size_xs {
+    font: var(--font-ys-caption-14-regular);
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    padding-inline: 16px;
+    padding-block: 7px;
+    border-radius: var(--border-radius-4);
+    gap: var(--spacing-4);
+}
+
+.prisma-button2_size_xs.prisma-button2_with-icon {
+    padding: 4px;
+}
+
+.prisma-button2_size_xs.prisma-button2_with-icon-start {
+    padding-inline-start: 12px;
+}
+
+.prisma-button2_size_xs.prisma-button2_with-icon-end {
+    padding-inline-end: 12px;
+}
+
+.prisma-button2_size_xs.prisma-button2_with-icon-start,
+.prisma-button2_size_xs.prisma-button2_with-icon-end {
+    padding-block: 4px;
+}
+
+.prisma-button2_size_s {
+    font: var(--font-ys-caption-14-regular);
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    padding-inline: 16px;
+    padding-block: 9px;
+    border-radius: var(--border-radius-5);
+    gap: var(--spacing-4);
+}
+
+.prisma-button2_size_s.prisma-button2_with-icon {
+    padding: 6px;
+}
+
+.prisma-button2_size_s.prisma-button2_with-icon-start {
+    padding-inline-start: 12px;
+}
+
+.prisma-button2_size_s.prisma-button2_with-icon-end {
+    padding-inline-end: 12px;
+}
+
+.prisma-button2_size_s.prisma-button2_with-icon-start,
+.prisma-button2_size_s.prisma-button2_with-icon-end {
+    padding-block: 6px;
+}
+
+.prisma-button2_with-icon .prisma-button2__icon {
+    width: 24px;
+}
+
+.prisma-button2_progress {
+    pointer-events: none;
+}
+
+.prisma-button2_progress .prisma-button2__content,
+.prisma-button2_progress .prisma-button2__icon {
+    visibility: hidden;
+}
+
+.prisma-button2__progress-dot {
+    position: relative;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: currentColor;
+    color: currentColor;
+    animation: dotFlicker 1.5s ease-in infinite;
+    display: block;
+    animation-delay: 0.4s;
+}
+
+.prisma-button2__progress-dot::before,
+.prisma-button2__progress-dot::after {
+    content: ' ';
+    display: inline-block;
+    position: absolute;
+    background-color: currentColor;
+    border-radius: 100%;
+    top: 0;
+    width: 6px;
+    height: 6px;
+    animation: dotFlicker 1.5s ease-in infinite;
+    color: currentColor;
+}
+
+.prisma-button2__progress-dot::before {
+    right: 10px;
+    animation-delay: 0s;
+}
+
+.prisma-button2__progress-dot::after {
+    left: 10px;
+    animation-delay: 0.6s;
+}
+
+@keyframes dotFlicker {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.prisma-button2__progress-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.prisma-modal__content {
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+    max-height: 100dvh;
+    overflow-y: auto;
+    position: relative;
+    scrollbar-width: thin;
+}
+
+    .prisma-modal__content::-webkit-scrollbar {
+        height: var(--border-radius-12);
+        width: var(--border-radius-12);
+    }
+
+    .prisma-modal__content::-webkit-scrollbar-thumb {
+        background-clip: content-box;
+        background-color: var(--color-background-glassy-b);
+        border-color: transparent;
+        border-radius: var(--border-radius-12);
+        border-style: solid;
+        border-width: var(--border-radius-4);
+        -webkit-transition: background-color 0.3s;
+        transition: background-color 0.3s;
+    }
+
+    .prisma-modal__content::-webkit-scrollbar-track {
+        background-color: transparent;
+        border: 0;
+    }
+
+    .prisma-modal__content::-webkit-scrollbar-button {
+        display: none;
+    }
+
+    @media (pointer: fine) {
+        .prisma-modal__content:not(.prisma-modal__content:hover)::-webkit-scrollbar-thumb {
+            background-color: transparent;
+        }
+    }
+
+.prisma-modal__content_fullscreen {
+    height: calc(100% - 2 * var(--modal-margin));
+    width: calc(100% - 2 * var(--modal-margin));
+}
+
+.prisma-modal__content_view_default {
+    --modal-margin: var(--spacing-8);
+
+    background-color: var(--color-background-default);
+    border-radius: var(--border-radius-12);
+}
+
+.prisma-modal__content_view_clear {
+    --modal-margin: 0px;
+}
+
+.prisma-modal__overlay {
+    --overlay-animation-transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-background-overlay);
+}
+
+.prisma-modal__overlay_animation_enter,
+.prisma-modal__overlay_animation_appear {
+    opacity: 0.1;
+}
+
+.prisma-modal__overlay_animation_enter .prisma-modal__content,
+.prisma-modal__overlay_animation_appear .prisma-modal__content {
+    transform: translateY(50px) scale(0.98);
+    opacity: 0;
+}
+
+.prisma-modal__overlay_animation_enter-active,
+.prisma-modal__overlay_animation_enter-done,
+.prisma-modal__overlay_animation_appear-active,
+.prisma-modal__overlay_animation_appear-done {
+    opacity: 1;
+    transition: var(--overlay-animation-transition);
+}
+
+.prisma-modal__overlay_animation_enter-active .prisma-modal__content,
+.prisma-modal__overlay_animation_enter-done .prisma-modal__content,
+.prisma-modal__overlay_animation_appear-active .prisma-modal__content,
+.prisma-modal__overlay_animation_appear-done .prisma-modal__content {
+    transition: var(--overlay-animation-transition);
+
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+}
+
+.prisma-modal__overlay_animation_exit {
+    opacity: 1;
+}
+
+.prisma-modal__overlay_animation_exit .prisma-modal__content {
+    opacity: 1;
+}
+
+.prisma-modal__overlay_animation_exit-active {
+    opacity: 0.1;
+    transition: var(--overlay-animation-transition);
+}
+
+.prisma-modal__overlay_animation_exit-active .prisma-modal__content {
+    transition: var(--overlay-animation-transition);
+
+    transform: translateY(50px) scale(0.98);
+    opacity: 0;
+}
+
+.referral-modal-v2__wrapper {
+    color: var(--color-content-primary);
+}
+
+    @media (max-width: 767px) {.referral-modal-v2__wrapper {
+        padding: 16px
+}
+    }
+
+.referral-modal-v2__wrapper:not([class*='fullscreen']) {
+    width: 480px;
+    height: 600px;
+    padding: 32px;
+}
+
+@media (max-height: 599px) {
+
+.referral-modal-v2__wrapper:not([class*='fullscreen']) {
+        height: 90vh
+}
+    }
+
+.referral-modal-v2__button {
+    width: 100%;
+    margin-top: auto;
+}
+
+.referral-modal-v2__button .prisma-button__label {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+}
+
+.referral-modal-v2__content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    overflow: auto;
+}
+
+.referral-modal-v2__image {
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+
+    width: 365px;
+    height: 365px;
+}
+
+    @media (max-width: 413px) {.referral-modal-v2__image {
+        width: 320px;
+        height: 320px
+}
+    }
+
+    @media (max-width: 359px), (max-height: 500px) {.referral-modal-v2__image {
+        display: none
+}
+    }
+
+.referral-modal-v2__text {
+    margin: 0;
+
+    font: var(--font-ys-body-16-regular-ui);
+
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.referral-modal-v2__text ol {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+    padding-inline-start: 1.5em;
+}
+
+.referral-modal-v2__title {
+    margin: 0;
+    margin-right: var(--spacing-40);
+    font: var(--font-ys-header-28-medium);
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+    @media (max-width: 1023px) {.referral-modal-v2__title {
+        font: var(--font-ys-header-24-medium);
+        font-feature-settings: 'pnum' on, 'lnum' on
+}
+    }
+
+.prisma-button2.referral-modal-v2__close {
+    position: absolute;
+    top: var(--spacing-8);
+    right: var(--spacing-8);
+}
+
+
+/*# sourceMappingURL=https://s3.mds.yandex.net/wirth-sourcemaps/v2.889/build/referral-modal-v2.build.css.map*/

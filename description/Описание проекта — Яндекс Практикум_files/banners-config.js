@@ -1,0 +1,2 @@
+if (!window._data) window._data = {};
+    window._data['banners-config'] = {"profile":{"priority":["price-will-rise","discount-event","check-list"],"maxCount":1},"theory":{"priority":["discount-event","check-list"],"maxCount":1}};

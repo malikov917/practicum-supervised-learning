@@ -1,0 +1,444 @@
+.poll-welcome__modal-overlay.poll-welcome__modal-overlay {
+        z-index: 100001;
+    }
+    .poll-welcome__modal-content.poll-welcome__modal-content {
+        max-width: calc(100% - var(--spacing-8) * 2);
+        width: calc(100% - var(--spacing-8) * 2);
+        height: calc(100% - var(--spacing-8) * 2);
+
+        background-color: var(--color-background-alternate);
+    }
+    .poll-welcome__scrollable {
+        height: 100%;
+    }
+    .poll-welcome__content {
+        padding: 40px;
+
+        color: var(--color-content-primary);
+    }
+    @media (max-width: 539px) {
+    .poll-welcome__content {
+            padding: 24px 0
+    }
+        }
+
+.prisma-tree__node {
+    --tree-level-marker-line-offset-block: var(--spacing-4);
+
+    position: relative;
+}
+
+.prisma-tree__node::before {
+    content: '';
+
+    position: absolute;
+    left: calc(var(--tree-level-padding-inline-start-default) / 2);
+    top: calc(var(--tree-node-item-height) + var(--tree-level-marker-line-offset-block));
+
+    height: calc(100% - var(--tree-node-item-height) - var(--tree-level-marker-line-offset-block) * 2);
+    width: 1px;
+
+    background-color: var(--color-background-stroke);
+}
+
+.prisma-tree__node_leaf {
+    padding-inline-start: 36px;
+}
+
+.prisma-tree__node_leaf::before {
+    display: none;
+}
+
+.prisma-tree__node-checkbox {
+    --offset-block-start: 0;
+
+    box-sizing: border-box;
+
+    justify-content: start;
+    align-items: start;
+
+    width: 100%;
+    min-height: var(--tree-node-item-height);
+
+    padding: 8px 10px;
+
+    font: var(--checkbox-font);
+    border-radius: var(--border-radius-5);
+
+    transition: background-color ease-out 0.15s;
+}
+
+.prisma-tree__node-checkbox:hover {
+    background-color: var(--color-background-glassy-a);
+}
+
+.prisma-tree__node-checkbox:hover
+    .prisma-tree__node-checkbox-icon-wrapper.prisma-tree__node-checkbox-icon-wrapper.prisma-tree__node-checkbox-icon-wrapper {
+    background-color: unset;
+}
+
+.prisma-tree__node-checkbox:hover
+    .prisma-tree__node-checkbox-icon-wrapper_selected.prisma-tree__node-checkbox-icon-wrapper_selected.prisma-tree__node-checkbox-icon-wrapper_selected {
+    background-color: var(--color-accent-neutral-hover);
+}
+
+.prisma-tree__node-checkbox:active {
+    background-color: var(--color-background-glassy-b);
+}
+
+.prisma-tree__node-checkbox-icon-wrapper {
+    margin-block-start: var(--checkbox-icon-margin-block-start);
+}
+
+.prisma-tree__node-checkbox-label-text {
+    margin-block-start: var(--checkbox-icon-margin-label-text);
+
+    word-break: break-word;
+}
+
+.prisma-tree__node-item {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: start;
+}
+
+
+.prisma-tree_size_s {
+    --checkbox-font: var(--font-ys-caption-14-regular);
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    --checkbox-icon-margin-block-start: var(--spacing-2);
+    --checkbox-icon-margin-label-text: var(--spacing-2);
+    --checkbox-icon-label-text-gap: var(--spacing-8);
+    --checkbox-size: 16px;
+
+    --tree-level-marker-line-offset-block: var(--spacing-4);
+    --tree-level-padding-inline-start-default: 36px;
+    --tree-node-item-height: 36px;
+}
+
+.prisma-tree_size_m {
+    --checkbox-font: var(--font-ys-body-16-regular-ui);
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    --checkbox-icon-margin-block-start: var(--spacing-2);
+    --checkbox-icon-margin-label-text: 0;
+    --checkbox-icon-label-text-gap: var(--spacing-8);
+    --checkbox-size: 16px;
+
+    --tree-level-marker-line-offset-block: var(--spacing-4);
+    --tree-level-padding-inline-start-default: 36px;
+    --tree-node-item-height: 36px;
+}
+
+.prisma-tree_size_l {
+    --checkbox-font: var(--font-ys-body-16-regular-ui);
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    --checkbox-icon-margin-block-start: var(--spacing-2);
+    --checkbox-icon-margin-label-text: 0;
+    --checkbox-icon-label-text-gap: var(--spacing-8);
+    --checkbox-size: 16px;
+
+    --tree-level-marker-line-offset-block: var(--spacing-4);
+    --tree-level-padding-inline-start-default: 36px;
+    --tree-node-item-height: 36px;
+}
+
+.prisma-tree__level {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.prisma-tree__level .prisma-tree__level {
+    padding-inline-start: var(--tree-level-padding-inline-start-default);
+}
+
+.prisma-tree__level .prisma-tree__level_last {
+    padding-inline-start: calc(
+        var(--tree-level-padding-inline-start-default) + var(--checkbox-size) + var(--checkbox-icon-label-text-gap)
+    );
+}
+
+.prisma-tree__level_last .prisma-tree__node_leaf {
+    padding-inline-start: 0;
+}
+
+.prisma-tree__search {
+    margin-block-end: var(--spacing-4);
+}
+
+.prisma-input-tree-select {
+    position: relative;
+}
+
+.prisma-input-tree-select_size_s {
+    font: var(--font-ys-caption-14-regular);
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.prisma-input-tree-select_size_s .prisma-input-tree-select__label_collapsed {
+    opacity: 0;
+}
+
+.prisma-input-tree-select_size_m {
+    font: var(--font-ys-body-16-regular-ui);
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.prisma-input-tree-select_size_l {
+    font: var(--font-ys-body-16-regular-ui);
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.prisma-input-tree-select_view_default {
+    --border-width: 1px;
+
+    --border-color: var(--color-background-stroke);
+    --border-color-hover: var(--color-background-stroke);
+    --border-color-disabled: var(--color-background-stroke);
+
+    --input-background-color: var(--color-background-default);
+    --input-background-color-hover: var(--color-background-glassy-a);
+    --input-background-color-disabled: var(--color-background-default);
+
+    --input-color: var(--color-content-primary);
+    --input-color-hover: var(--color-content-primary);
+    --input-color-disabled: var(--color-content-tertiary);
+
+    --label-color: var(--color-content-secondary);
+    --label-color-collapsed: var(--color-content-secondary);
+    --label-color-hover: var(--color-content-secondary);
+    --label-color-disabled: var(--color-content-tertiary);
+}
+
+.prisma-input-tree-select_view_ghost {
+    --border-width: 1px;
+
+    --border-color: var(--color-content-primary);
+    --border-color-hover: var(--color-content-secondary);
+    --border-color-disabled: var(--color-content-tertiary);
+
+    --input-background-color: transparent;
+    --input-background-color-hover: transparent;
+    --input-background-color-disabled: transparent;
+
+    --input-color: var(--color-content-primary);
+    --input-color-hover: var(--color-content-secondary);
+    --input-color-disabled: var(--color-content-tertiary);
+
+    --label-color: var(--color-content-primary);
+    --label-color-collapsed: var(--color-content-secondary);
+    --label-color-hover: var(--color-content-secondary);
+    --label-color-disabled: var(--color-content-tertiary);
+}
+
+.prisma-input-tree-select__dropdown {
+    box-sizing: border-box;
+
+    position: absolute;
+
+    padding: 4px;
+    border-radius: var(--dropdown-border-radius);
+    box-shadow: var(--shadow-medium-default);
+    background-color: var(--color-background-default);
+
+    overflow: auto;
+
+    scroll-behavior: smooth;
+}
+
+.prisma-input-tree-select__dropdown_size_s {
+    --dropdown-border-radius: var(--border-radius-4);
+}
+
+.prisma-input-tree-select__dropdown_size_m {
+    --dropdown-border-radius: var(--border-radius-5);
+}
+
+.prisma-input-tree-select__dropdown_size_l {
+    --dropdown-border-radius: var(--border-radius-6);
+}
+
+.prisma-input-file__item {
+    align-items: center;
+    background-color: var(--color-background-alternate);
+    border-radius: var(--border-radius);
+    color: var(--color-content-primary);
+    display: flex;
+    gap: 0.5ch;
+    padding: 12px;
+}
+.prisma-input-file__item_size {
+    color: var(--color-content-secondary);
+    margin-inline-end: auto;
+}
+
+.prisma-input-file {
+    --border-radius: var(--border-radius-8);
+    display: grid;
+    font: var(--font-ys-body-16-regular-ui);
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    grid-gap: 0.5em;
+    gap: 0.5em;
+    position: relative;
+}
+.prisma-input-file__dropzone {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2716%27 height=%2716%27 fill=%27none%27%3E%3Cpath fill=%27%23000%27 fill-opacity=%27.5%27 fill-rule=%27evenodd%27 d=%27M4.798 3.16a.5.5 0 0 0 .363.843H7V9a1 1 0 0 0 2 0V4.003h1.839a.5.5 0 0 0 .363-.844L8.363.157a.5.5 0 0 0-.726 0l-2.84 3.002ZM13 7a1 1 0 1 1 2 0v6.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 13.5V7a1 1 0 1 1 2 0v6h10V7Z%27 clip-rule=%27evenodd%27/%3E%3C/svg%3E");
+    background-position: 12px 50%;
+    background-repeat: no-repeat;
+    border: 1px dashed var(--color-background-stroke);
+    border-radius: var(--border-radius);
+    color: var(--color-content-secondary);
+    cursor: default;
+    display: block;
+    padding: 19px 12px 19px 36px;
+    position: relative;
+    transition: border-color 0.15s ease-out;
+}
+.prisma_theme_dark .prisma-input-file__dropzone {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2716%27 height=%2716%27 fill=%27none%27%3E%3Cpath fill=%27%23D6D6D6%27 fill-opacity=%27.5%27 fill-rule=%27evenodd%27 d=%27M4.798 3.16a.5.5 0 0 0 .363.843H7V9a1 1 0 0 0 2 0V4.003h1.839a.5.5 0 0 0 .363-.844L8.363.157a.5.5 0 0 0-.726 0l-2.84 3.002ZM13 7a1 1 0 1 1 2 0v6.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 13.5V7a1 1 0 1 1 2 0v6h10V7Z%27 clip-rule=%27evenodd%27/%3E%3C/svg%3E");
+}
+.prisma-input-file__dropzone:hover {
+    border-color: var(--color-accent-neutral);
+}
+.prisma-input-file__label_cta {
+    color: var(--color-accent-main-a);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.15s ease-out;
+}
+.prisma-input-file__dropzone:hover .prisma-input-file__label_cta {
+    text-decoration-color: currentColor;
+}
+.prisma-input-file__dropzone:focus-within {
+    outline: auto;
+}
+.prisma-input-file__dropzone_active {
+    background-color: var(--color-palette-blue-200-a);
+    border-color: var(--color-accent-main-a);
+}
+.prisma-input-file__dropzone_active::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2716%27 height=%2716%27 fill=%27none%27%3E%3Cpath fill=%27%23357DE1%27 fill-rule=%27evenodd%27 d=%27M9 1a1 1 0 1 0-2 0v6H1a1 1 0 1 0 0 2h6v6a1 1 0 1 0 2 0V9h6a1 1 0 1 0 0-2H9V1Z%27 clip-rule=%27evenodd%27/%3E%3C/svg%3E");
+    background-size: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #e6effb;
+    border-radius: var(--border-radius);
+    content: '';
+    display: block;
+    position: absolute;
+    inset: 0;
+}
+
+.prisma-radio__control {
+    position: relative;
+
+    flex: 0 0 auto;
+
+    width: var(--control-size);
+    height: var(--control-size);
+
+    border: var(--control-border-width) solid var(--control-border-color);
+    border-radius: 50%;
+
+    background-color: var(--control-background-color);
+}
+
+.prisma-radio__control::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    width: calc(var(--control-size) / 2);
+    height: calc(var(--control-size) / 2);
+
+    border-radius: 50%;
+
+    background-color: var(--control-bullet-color);
+}
+
+.prisma-radio__control_selected::before {
+    content: '';
+}
+
+.prisma-radio {
+    --control-background-color: transparent;
+    --control-border-color: var(--color-background-stroke);
+    --control-border-width: 1px;
+    --control-bullet-color: var(--color-accent-neutral);
+    --label-color: var(--color-content-primary);
+
+    display: inline-flex;
+    gap: var(--spacing-8);
+
+    color: var(--label-color);
+}
+
+.prisma-radio:not(.prisma-radio_disabled):not(.prisma-radio_selected):hover {
+    --control-background-color: var(--color-background-glassy-b);
+    --control-border-color: var(--color-background-glassy-b);
+}
+
+.prisma-radio_disabled {
+    --control-border-color: var(--color-background-glassy-b);
+    --control-bullet-color: var(--color-background-glassy-b);
+    --label-color: var(--color-content-tertiary);
+}
+
+.prisma-radio_disabled:not(.prisma-radio_selected) {
+    --control-background-color: var(--color-background-glassy-a);
+}
+
+.prisma-radio_focused .prisma-radio__control {
+    outline: 3px auto Highlight;
+    outline: 3px auto -webkit-focus-ring-color; /* stylelint-disable-line declaration-block-no-duplicate-properties */
+}
+
+.prisma-radio_selected {
+    --control-border-width: 1.5px;
+}
+
+.prisma-radio_selected:not(.prisma-radio_disabled) {
+    --control-border-color: var(--color-accent-neutral);
+}
+
+.prisma-radio_size_m {
+    --control-size: 24px;
+
+    font: var(--font-ys-body-16-regular-ui);
+
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    /* Не можем унести в общий стиль .prisma-radio, так как шортхэнд font его перетрёт */
+    line-height: var(--control-size);
+}
+
+.prisma-radio_size_s {
+    --control-size: 16px;
+
+    font: var(--font-ys-caption-14-regular);
+
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    /* Не можем унести в общий стиль .prisma-radio, так как шортхэнд font его перетрёт */
+    line-height: var(--control-size);
+}
+
+.prisma-radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-12);
+}
+
+
+/*# sourceMappingURL=https://s3.mds.yandex.net/wirth-sourcemaps/v2.889/build/poll-welcome.build.css.map*/
